@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <TextView
+        android:id="@+id/txt_maintitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Title"
+        android:text="Tambah Mahasiswa"
+        android:fontFamily="@font/poppinsmedium"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/add_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Input"
+            android:hint="nama"
+            />
+
+        <EditText
+            android:id="@+id/add_nim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Input"
+            android:hint="nim"
+            />
+
+        <EditText
+            android:id="@+id/add_jurusan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Input"
+            android:hint="jurusan"
+            />
+
+        <EditText
+            android:id="@+id/add_semester"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            style="@style/Input"
+            android:hint="semester"
+            />
+
+        <EditText
+            android:id="@+id/add_asal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Input"
+            android:hint="asal daerah"
+            android:textColorHint="@color/black"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/btn_add"
+                style="@style/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Tambah" />
+
+            <Button
+                android:id="@+id/btn_undo"
+                style="@style/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Batal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

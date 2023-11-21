@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity"
+    android:orientation="vertical"
+    android:background="@color/pink_young"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Title"
+        android:text="Profile Student"
+        android:textColor="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:src="@drawable/student"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            style="@style/Desc"
+            />
+
+        <TextView
+            android:id="@+id/desc_nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nama"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            style="@style/Desc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="NIM"
+            style="@style/Desc" />
+
+        <TextView
+            android:id="@+id/desc_nim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NIM"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            style="@style/Desc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Jurusan"
+            style="@style/Desc" />
+
+        <TextView
+            android:id="@+id/desc_jurusan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jurusan"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            style="@style/Desc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Semester"
+            style="@style/Desc" />
+
+        <TextView
+            android:id="@+id/desc_semester"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Semester"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            style="@style/Desc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Asal Daerah"
+            style="@style/Desc" />
+
+        <TextView
+            android:id="@+id/desc_asal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Asal Daerah"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            style="@style/Desc"/>
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            style="@style/button"
+            android:text="Kembali"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>
