@@ -19,7 +19,6 @@
         android:layout_height="wrap_content"
         style="@style/Title"
         android:text="Profile Student"
-        android:textColor="@color/white"
         />
 
     <LinearLayout
@@ -33,7 +32,7 @@
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_gravity="center"
-            android:src="@drawable/student"
+            android:src="@drawable/old_man"
             />
 
         <TextView
@@ -41,6 +40,7 @@
             android:layout_height="wrap_content"
             android:text="Nama"
             style="@style/Desc"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -50,14 +50,16 @@
             android:text="Nama"
             android:textSize="17sp"
             android:textStyle="bold"
-            style="@style/Desc"/>
+            style="@style/Desc"
+            />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="NIM"
-            style="@style/Desc" />
+            style="@style/Desc"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/desc_nim"
@@ -73,7 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Jurusan"
-            style="@style/Desc" />
+            style="@style/Desc"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/desc_jurusan"
@@ -89,7 +92,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Semester"
-            style="@style/Desc" />
+            style="@style/Desc"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/desc_semester"
@@ -105,7 +109,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Asal Daerah"
-            style="@style/Desc" />
+            style="@style/Desc"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/desc_asal"
