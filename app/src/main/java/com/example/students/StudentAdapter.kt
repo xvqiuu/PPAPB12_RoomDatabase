@@ -14,7 +14,9 @@ import java.util.concurrent.ExecutorService
 typealias onClickUpdate = (Student) -> Unit
 typealias onClickDelete = (Student) -> Unit
 
-class StudentAdapter(private val listStudents: List<Student>,private val onClickUpdate : onClickUpdate, private val onClickDelete: onClickDelete):
+class StudentAdapter(private val listStudents: List<Student>,
+                     private val onClickUpdate : onClickUpdate,
+                     private val onClickDelete: onClickDelete):
     RecyclerView.Adapter<StudentAdapter.ItemStudentViewHolder>() {
 
     inner class ItemStudentViewHolder(private val binding: ItemStudentBinding) :

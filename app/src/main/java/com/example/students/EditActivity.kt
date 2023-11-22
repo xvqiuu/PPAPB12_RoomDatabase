@@ -5,6 +5,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.students.databinding.ActivityEditBinding
 import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 class EditActivity : AppCompatActivity() {
 
@@ -20,6 +21,10 @@ class EditActivity : AppCompatActivity() {
         binding = ActivityEditBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        executorService = Executors.newSingleThreadExecutor()
+        val db = StudentRoomDatabase.getDatabase(this)
+        mStudentDao = db!!.StudentDao()!!
+
         with(binding) {
             edtNama.setText(intent.getStringExtra("nama"))
             edtNim.setText(intent.getStringExtra("nim"))
@@ -29,25 +34,29 @@ class EditActivity : AppCompatActivity() {
             btnEdit.setOnClickListener {
                 update(
                     Student(
+                    id = intent.getIntExtra("id",0),
                     nama = edtNama.text.toString(),
                     nim = edtNim.text.toString(),
                     jurusan = edtJurusan.text.toString(),
                     semester = edtSemester.text.toString(),
                     asal = edtAsal.text.toString()
                 ))
-                finish()
-
-                Toast.makeText(this@EditActivity, "Data Berhasil Disimpan",
-                    Toast.LENGTH_SHORT).show()
             }
         }
     }
 
     private fun update(student: Student) {
         executorService.execute {
-            mStudentDao.insert(student)
+            mStudentDao.update(student)
+
+            runOnUiThread {
+                finish()
+                Toast.makeText(
+                    this@EditActivity,
+                    "Data Berhasil Disimpan",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
-
     }
-
 }
