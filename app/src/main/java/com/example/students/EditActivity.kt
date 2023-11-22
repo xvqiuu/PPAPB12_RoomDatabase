@@ -21,7 +21,7 @@ class EditActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         with(binding) {
-            edtNama.setText(intent.getStringExtra("title"))
+            edtNama.setText(intent.getStringExtra("nama"))
             edtNim.setText(intent.getStringExtra("nim"))
             edtJurusan.setText(intent.getStringExtra("jurusan"))
             edtSemester.setText(intent.getStringExtra("semester"))
@@ -29,7 +29,6 @@ class EditActivity : AppCompatActivity() {
             btnEdit.setOnClickListener {
                 update(
                     Student(
-                    id = updateId,
                     nama = edtNama.text.toString(),
                     nim = edtNim.text.toString(),
                     jurusan = edtJurusan.text.toString(),
